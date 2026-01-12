@@ -1,15 +1,28 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Calendar, ArrowRight } from "lucide-react";
+import { Calendar, ArrowRight, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const CTASection = () => {
   return (
-    <section className="py-24 bg-willow-500 relative overflow-hidden">
-      {/* Background Elements */}
+    <section className="py-24 bg-cosmic-900 relative overflow-hidden">
+      {/* Stars Background */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-32 -right-32 w-[400px] h-[400px] organic-blob bg-willow-400/30" />
-        <div className="absolute -bottom-32 -left-32 w-[300px] h-[300px] organic-blob-2 bg-willow-600/30" />
+        {[...Array(20)].map((_, i) => (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: [0.2, 0.8, 0.2] }}
+            transition={{ duration: 2 + Math.random() * 2, repeat: Infinity, delay: Math.random() * 2 }}
+            className="absolute w-1 h-1 bg-cosmic-50 rounded-full"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+          />
+        ))}
+        <div className="absolute -top-32 -right-32 w-[400px] h-[400px] border border-cosmic-700 rounded-full opacity-20" />
+        <div className="absolute -bottom-32 -left-32 w-[300px] h-[300px] border border-cosmic-700 rounded-full opacity-20" />
       </div>
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
@@ -20,10 +33,15 @@ const CTASection = () => {
           transition={{ duration: 0.8 }}
           className="max-w-2xl mx-auto text-center"
         >
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-primary-foreground mb-6">
+          <div className="flex justify-center gap-2 mb-6">
+            <Star className="w-5 h-5 text-cosmic-300" />
+            <Star className="w-5 h-5 text-cosmic-200" />
+            <Star className="w-5 h-5 text-cosmic-300" />
+          </div>
+          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-cosmic-50 mb-6">
             Take the First Step Today
           </h2>
-          <p className="text-willow-100 text-lg mb-8">
+          <p className="text-cosmic-300 text-lg mb-8">
             Early support can make a meaningful difference.
             <br />
             We are here to guide you.
@@ -31,7 +49,7 @@ const CTASection = () => {
           <Button
             variant="hero"
             size="xl"
-            className="bg-cream-100 text-willow-700 hover:bg-cream-50"
+            className="bg-cosmic-50 text-cosmic-900 hover:bg-cosmic-100 border-cosmic-200"
             asChild
           >
             <Link to="/contact">

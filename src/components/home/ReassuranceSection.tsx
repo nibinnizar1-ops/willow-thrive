@@ -12,8 +12,8 @@ const ReassuranceSection = () => {
           transition={{ duration: 0.8 }}
           className="max-w-3xl mx-auto text-center"
         >
-          <div className="w-16 h-16 bg-coral-400/20 rounded-full flex items-center justify-center mx-auto mb-8">
-            <Heart className="w-8 h-8 text-coral-500" />
+          <div className="w-16 h-16 bg-cosmic-100 rounded-full flex items-center justify-center mx-auto mb-8 border border-cosmic-200">
+            <Heart className="w-8 h-8 text-cosmic-700" />
           </div>
           
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mb-6">

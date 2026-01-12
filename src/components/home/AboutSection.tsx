@@ -17,13 +17,13 @@ const AboutSection = () => {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="aspect-[4/3] bg-cream-100 rounded-3xl overflow-hidden relative shadow-xl">
+            <div className="aspect-[4/3] bg-cosmic-100 rounded-3xl overflow-hidden relative shadow-xl border border-cosmic-200">
               <img 
                 src={aboutImage} 
                 alt="Happy child playing with educational toys at Willow" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover grayscale"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-willow-900/10 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-cosmic-900/20 to-transparent" />
             </div>
           </motion.div>
 
@@ -34,7 +34,7 @@ const AboutSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <span className="text-willow-500 font-medium text-sm uppercase tracking-wider mb-4 block">
+            <span className="text-cosmic-500 font-medium text-sm uppercase tracking-wider mb-4 block">
               About Willow
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mb-6">
@@ -50,7 +50,7 @@ const AboutSection = () => {
                 Our approach is gentle, structured, and deeply personalized — because no two children grow the same way.
               </p>
             </div>
-            <Button variant="willow" size="lg" asChild>
+            <Button variant="cosmic" size="lg" asChild>
               <Link to="/about">
                 Learn More About Us
                 <ArrowRight className="w-4 h-4" />

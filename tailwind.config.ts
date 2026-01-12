@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['Space Grotesk', 'sans-serif'],
         serif: ['Playfair Display', 'serif'],
       },
       colors: {
@@ -51,28 +51,17 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        willow: {
-          50: "hsl(var(--willow-50))",
-          100: "hsl(var(--willow-100))",
-          200: "hsl(var(--willow-200))",
-          300: "hsl(var(--willow-300))",
-          400: "hsl(var(--willow-400))",
-          500: "hsl(var(--willow-500))",
-          600: "hsl(var(--willow-600))",
-          700: "hsl(var(--willow-700))",
-          800: "hsl(var(--willow-800))",
-          900: "hsl(var(--willow-900))",
-        },
-        cream: {
-          50: "hsl(var(--cream-50))",
-          100: "hsl(var(--cream-100))",
-          200: "hsl(var(--cream-200))",
-          300: "hsl(var(--cream-300))",
-        },
-        coral: {
-          400: "hsl(var(--coral-400))",
-          500: "hsl(var(--coral-500))",
-          600: "hsl(var(--coral-600))",
+        cosmic: {
+          50: "hsl(var(--cosmic-50))",
+          100: "hsl(var(--cosmic-100))",
+          200: "hsl(var(--cosmic-200))",
+          300: "hsl(var(--cosmic-300))",
+          400: "hsl(var(--cosmic-400))",
+          500: "hsl(var(--cosmic-500))",
+          600: "hsl(var(--cosmic-600))",
+          700: "hsl(var(--cosmic-700))",
+          800: "hsl(var(--cosmic-800))",
+          900: "hsl(var(--cosmic-900))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
@@ -109,6 +98,14 @@ export default {
           "0%, 100%": { transform: "translateY(0px) rotate(0deg)" },
           "50%": { transform: "translateY(-10px) rotate(3deg)" },
         },
+        "twinkle": {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.3" },
+        },
+        "orbit": {
+          "0%": { transform: "rotate(0deg) translateX(10px) rotate(0deg)" },
+          "100%": { transform: "rotate(360deg) translateX(10px) rotate(-360deg)" },
+        },
         "fade-in-up": {
           from: { opacity: "0", transform: "translateY(30px)" },
           to: { opacity: "1", transform: "translateY(0)" },
@@ -123,6 +120,8 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
         "float": "float 6s ease-in-out infinite",
         "float-slow": "float-slow 8s ease-in-out infinite",
+        "twinkle": "twinkle 3s ease-in-out infinite",
+        "orbit": "orbit 20s linear infinite",
         "fade-in-up": "fade-in-up 0.6s ease-out",
         "scale-in": "scale-in 0.5s ease-out",
       },

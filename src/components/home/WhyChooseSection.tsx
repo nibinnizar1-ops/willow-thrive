@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Check } from "lucide-react";
+import { Check, Star } from "lucide-react";
 
 const reasons = [
   "Experienced, child-focused therapists",
@@ -21,7 +21,7 @@ const WhyChooseSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <span className="text-willow-500 font-medium text-sm uppercase tracking-wider mb-4 block">
+            <span className="text-cosmic-500 font-medium text-sm uppercase tracking-wider mb-4 block">
               Why Choose Willow
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mb-6">
@@ -41,8 +41,8 @@ const WhyChooseSection = () => {
                   transition={{ delay: index * 0.1, duration: 0.5 }}
                   className="flex items-center gap-3"
                 >
-                  <div className="w-6 h-6 bg-willow-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Check className="w-4 h-4 text-willow-600" />
+                  <div className="w-6 h-6 bg-cosmic-900 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Check className="w-4 h-4 text-cosmic-50" />
                   </div>
                   <span className="text-foreground">{reason}</span>
                 </motion.li>
@@ -59,25 +59,23 @@ const WhyChooseSection = () => {
             className="relative"
           >
             <div className="aspect-square max-w-md mx-auto relative">
-              <div className="absolute inset-0 bg-willow-100 rounded-3xl" />
-              <div className="absolute inset-6 bg-cream-100 rounded-2xl flex items-center justify-center">
+              <div className="absolute inset-0 bg-cosmic-100 rounded-3xl border border-cosmic-200" />
+              <div className="absolute inset-6 bg-background rounded-2xl flex items-center justify-center border border-cosmic-200 shadow-lg">
                 <div className="text-center">
-                  <div className="w-32 h-32 bg-willow-300 organic-blob mx-auto mb-4 flex items-center justify-center animate-float">
-                    <span className="text-6xl">💚</span>
-                  </div>
-                  <p className="font-serif text-xl text-willow-700 font-semibold">
+                  <motion.div
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+                    className="w-32 h-32 border-2 border-dashed border-cosmic-300 rounded-full mx-auto mb-4 flex items-center justify-center"
+                  >
+                    <div className="w-20 h-20 bg-cosmic-900 rounded-full flex items-center justify-center">
+                      <Star className="w-10 h-10 text-cosmic-50" />
+                    </div>
+                  </motion.div>
+                  <p className="font-serif text-xl text-foreground font-semibold">
                     Trusted by Families
                   </p>
                 </div>
               </div>
-              {/* Floating badges */}
-              <motion.div
-                animate={{ rotate: [0, 5, 0, -5, 0] }}
-                transition={{ duration: 6, repeat: Infinity }}
-                className="absolute -top-4 -right-4 bg-coral-500 text-accent-foreground px-4 py-2 rounded-xl shadow-lg text-sm font-medium"
-              >
-                Safe Space ✨
-              </motion.div>
             </div>
           </motion.div>
         </div>

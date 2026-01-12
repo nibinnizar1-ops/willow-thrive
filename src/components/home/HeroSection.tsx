@@ -1,34 +1,45 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-therapy.jpg";
+
+// Star component for universe effect
+const StarParticle = ({ delay, x, y, size = 2 }: { delay: number; x: string; y: string; size?: number }) => (
+  <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: [0.3, 1, 0.3] }}
+    transition={{ duration: 3, repeat: Infinity, delay }}
+    className="absolute rounded-full bg-cosmic-400"
+    style={{ left: x, top: y, width: size, height: size }}
+  />
+);
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-hero">
-      {/* Organic Background Shapes */}
+      {/* Universe Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
+        {/* Subtle geometric shapes */}
         <motion.div
           animate={{ rotate: 360 }}
-          transition={{ duration: 120, repeat: Infinity, ease: "linear" }}
-          className="absolute -top-40 -right-40 w-[600px] h-[600px] organic-blob bg-willow-100/50"
+          transition={{ duration: 200, repeat: Infinity, ease: "linear" }}
+          className="absolute -top-40 -right-40 w-[600px] h-[600px] border border-cosmic-200 rounded-full opacity-30"
         />
         <motion.div
           animate={{ rotate: -360 }}
-          transition={{ duration: 100, repeat: Infinity, ease: "linear" }}
-          className="absolute -bottom-32 -left-32 w-[500px] h-[500px] organic-blob-2 bg-cream-200/60"
+          transition={{ duration: 150, repeat: Infinity, ease: "linear" }}
+          className="absolute -bottom-32 -left-32 w-[500px] h-[500px] border border-cosmic-200 rounded-full opacity-20"
         />
-        <motion.div
-          animate={{ y: [-20, 20, -20] }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-1/4 right-1/4 w-24 h-24 organic-blob bg-willow-200/40"
-        />
-        <motion.div
-          animate={{ y: [20, -20, 20] }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute bottom-1/3 left-1/3 w-16 h-16 organic-blob-2 bg-coral-400/20"
-        />
+        
+        {/* Stars */}
+        <StarParticle delay={0} x="10%" y="20%" size={3} />
+        <StarParticle delay={0.5} x="85%" y="15%" size={2} />
+        <StarParticle delay={1} x="70%" y="80%" size={2} />
+        <StarParticle delay={1.5} x="20%" y="70%" size={3} />
+        <StarParticle delay={2} x="90%" y="60%" size={2} />
+        <StarParticle delay={0.8} x="5%" y="50%" size={2} />
+        <StarParticle delay={1.2} x="50%" y="10%" size={3} />
       </div>
 
       <div className="container mx-auto px-4 lg:px-8 pt-24 pb-16 relative z-10">
@@ -44,15 +55,15 @@ const HeroSection = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2, duration: 0.5 }}
-              className="inline-flex items-center gap-2 bg-willow-100 text-willow-700 px-4 py-2 rounded-full text-sm font-medium mb-6"
+              className="inline-flex items-center gap-2 bg-cosmic-100 text-cosmic-700 px-4 py-2 rounded-full text-sm font-medium mb-6 border border-cosmic-200"
             >
-              <Sparkles className="w-4 h-4" />
+              <Star className="w-4 h-4" />
               Child Development & Rehabilitation
             </motion.div>
 
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6">
               Every Child Can{" "}
-              <span className="text-willow-500">Thrive</span>
+              <span className="text-cosmic-500">Thrive</span>
               <br />
               With the Right Care
             </h1>
@@ -68,7 +79,7 @@ const HeroSection = () => {
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </Button>
-              <Button variant="outline" size="xl" asChild>
+              <Button variant="heroOutline" size="xl" asChild>
                 <Link to="/services">Explore Our Services</Link>
               </Button>
             </div>
@@ -83,27 +94,29 @@ const HeroSection = () => {
           >
             <div className="relative">
               {/* Main Image Container */}
-              <div className="aspect-[4/3] max-w-lg mx-auto relative rounded-3xl overflow-hidden shadow-2xl">
+              <div className="aspect-[4/3] max-w-lg mx-auto relative rounded-3xl overflow-hidden shadow-2xl border border-cosmic-200">
                 <img 
                   src={heroImage} 
                   alt="Caring therapist working with a happy child at Willow" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover grayscale"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-willow-900/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-cosmic-900/30 to-transparent" />
               </div>
 
               {/* Floating Elements */}
               <motion.div
                 animate={{ y: [-10, 10, -10] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -top-4 right-4 bg-coral-500 text-accent-foreground px-4 py-2 rounded-2xl shadow-lg"
+                className="absolute -top-4 right-4 bg-cosmic-900 text-cosmic-50 px-4 py-2 rounded-2xl shadow-lg border border-cosmic-700"
               >
-                <span className="text-sm font-medium">✨ Expert Care</span>
+                <span className="text-sm font-medium flex items-center gap-2">
+                  <Star className="w-3 h-3" /> Expert Care
+                </span>
               </motion.div>
               <motion.div
                 animate={{ y: [10, -10, 10] }}
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -bottom-4 left-4 bg-willow-500 text-primary-foreground px-4 py-2 rounded-2xl shadow-lg"
+                className="absolute -bottom-4 left-4 bg-cosmic-100 text-cosmic-800 px-4 py-2 rounded-2xl shadow-lg border border-cosmic-200"
               >
                 <span className="text-sm font-medium">🤝 Family-Centered</span>
               </motion.div>
