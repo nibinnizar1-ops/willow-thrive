@@ -15,7 +15,7 @@ const Parents = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="pt-32 pb-24 bg-gradient-hero">
+      <section className="pt-32 pb-24 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -23,14 +23,14 @@ const Parents = () => {
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
-            <span className="text-willow-500 font-medium text-sm uppercase tracking-wider mb-4 block">
+            <span className="text-cosmic-700/80 font-medium text-sm uppercase tracking-wider mb-4 block">
               For Parents & Caregivers
             </span>
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-cosmic-700 mb-6">
               Supporting Parents{" "}
-              <span className="text-willow-500">Every Step</span> of the Way
+              <span className="text-cosmic-700/90">Every Step</span> of the Way
             </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lg text-cosmic-700/90 leading-relaxed">
               Parents are a vital part of a child's development journey. We provide clear guidance, practical suggestions, and emotional reassurance so families feel confident and informed.
             </p>
           </motion.div>
@@ -38,7 +38,7 @@ const Parents = () => {
       </section>
 
       {/* Support Areas */}
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -47,7 +47,7 @@ const Parents = () => {
             transition={{ duration: 0.6 }}
             className="text-center max-w-2xl mx-auto mb-16"
           >
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-cosmic-700 mb-4">
               What You Can Expect
             </h2>
           </motion.div>
@@ -60,15 +60,15 @@ const Parents = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.6 }}
-                className="bg-willow-50 p-8 rounded-3xl"
+                className="bg-cosmic-700/10 backdrop-blur-sm p-8 rounded-3xl border border-cosmic-700/20"
               >
-                <div className="w-12 h-12 bg-willow-200 rounded-2xl flex items-center justify-center mb-6">
-                  <area.icon className="w-6 h-6 text-willow-600" />
+                <div className="w-12 h-12 bg-cosmic-700/20 rounded-2xl flex items-center justify-center mb-6">
+                  <area.icon className="w-6 h-6 text-cosmic-700" />
                 </div>
-                <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
+                <h3 className="text-xl font-semibold text-cosmic-700 mb-3">
                   {area.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-cosmic-700/90 leading-relaxed">
                   {area.desc}
                 </p>
               </motion.div>
@@ -78,7 +78,7 @@ const Parents = () => {
       </section>
 
       {/* Reassurance */}
-      <section className="py-24 bg-cream-100">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -87,19 +87,19 @@ const Parents = () => {
             transition={{ duration: 0.8 }}
             className="max-w-3xl mx-auto text-center"
           >
-            <div className="w-16 h-16 bg-coral-400/20 rounded-full flex items-center justify-center mx-auto mb-8">
-              <Heart className="w-8 h-8 text-coral-500" />
+            <div className="w-16 h-16 bg-cosmic-700/20 rounded-full flex items-center justify-center mx-auto mb-8">
+              <Heart className="w-8 h-8 text-cosmic-700" />
             </div>
 
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-cosmic-700 mb-6">
               You're Doing the Right Thing
             </h2>
 
-            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+            <p className="text-lg text-cosmic-700/90 leading-relaxed mb-6">
               Seeking help for your child is an act of love and courage. We understand the worries, the questions, and sometimes the uncertainty. At Willow, you'll find a team that genuinely cares — not just about your child, but about your whole family's well-being.
             </p>
 
-            <p className="text-lg text-foreground font-medium mb-8">
+            <p className="text-lg text-cosmic-700 font-medium mb-8">
               Let's take this journey together.
             </p>
 

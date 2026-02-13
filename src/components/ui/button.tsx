@@ -9,16 +9,16 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-cosmic-700 shadow-sm hover:shadow-md",
+        default: "bg-primary text-primary-foreground hover:bg-cosmic-600 shadow-sm hover:shadow-md",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline: "border-2 border-primary bg-transparent text-primary hover:bg-primary hover:text-primary-foreground",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-cosmic-100",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-cosmic-200",
         ghost: "hover:bg-cosmic-100 hover:text-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        hero: "bg-cosmic-900 text-cosmic-50 hover:bg-cosmic-800 shadow-lg hover:shadow-xl hover:-translate-y-0.5 font-semibold border border-cosmic-700",
-        heroOutline: "border-2 border-cosmic-900 bg-transparent text-cosmic-900 hover:bg-cosmic-900 hover:text-cosmic-50 font-semibold",
-        cosmic: "bg-cosmic-800 text-cosmic-50 hover:bg-cosmic-700 shadow-md hover:shadow-lg",
-        soft: "bg-cosmic-100 text-cosmic-800 hover:bg-cosmic-200",
+        hero: "bg-cosmic-700 text-white hover:bg-cosmic-600 shadow-lg hover:shadow-xl hover:-translate-y-0.5 font-semibold border border-cosmic-700",
+        heroOutline: "border-2 border-cosmic-700 bg-transparent text-cosmic-700 hover:bg-cosmic-700 hover:text-white font-semibold",
+        cosmic: "bg-cosmic-600 text-cosmic-50 hover:bg-cosmic-500 shadow-md hover:shadow-lg",
+        soft: "bg-cosmic-100 text-cosmic-700 hover:bg-cosmic-200",
       },
       size: {
         default: "h-10 px-4 py-2",

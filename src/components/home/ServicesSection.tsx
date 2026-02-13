@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { MessageCircle, Hand, BookOpen, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { CardsParallax, type iCardItem } from "@/components/ui/scroll-cards";
 
 const services = [
   {
@@ -26,7 +27,7 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section className="py-24 bg-cosmic-50">
+    <section className="py-12 bg-white">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Header */}
         <motion.div
@@ -36,41 +37,59 @@ const ServicesSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-2xl mx-auto mb-16"
         >
-          <span className="text-cosmic-500 font-medium text-sm uppercase tracking-wider mb-4 block">
+          <span className="text-cosmic-700/80 font-medium text-sm uppercase tracking-wider mb-4 block">
             Our Services
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-cosmic-700 mb-4">
             Core Services
           </h2>
-          <p className="text-muted-foreground">
+          <p className="text-cosmic-700/90">
             We offer specialized therapy services designed to support children's communication, development, learning, and daily functioning.
           </p>
         </motion.div>
 
-        {/* Service Cards */}
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1, duration: 0.6 }}
-              className="group"
-            >
-              <div className={`bg-background p-8 rounded-3xl h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-l-4 ${service.accent} border border-cosmic-200`}>
-                <div className="w-14 h-14 bg-cosmic-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-cosmic-900 group-hover:text-cosmic-50 transition-colors">
-                  <service.icon className="w-7 h-7" />
-                </div>
-                <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
-            </motion.div>
-          ))}
+        {/* Scroll Cards */}
+        <div className="mb-0">
+          <CardsParallax
+            items={[
+              {
+                title: "Speech & Hearing Therapy",
+                description: "Supporting children with speech delays, articulation challenges, and communication skills",
+                tag: "therapy",
+                src: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=2940&auto=format&fit=crop",
+                link: "/services#speech",
+                color: "#048a7a",
+                textColor: "white",
+              },
+              {
+                title: "Occupational Therapy",
+                description: "Building motor skills, sensory processing, and independence for daily activities",
+                tag: "therapy",
+                src: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?q=80&w=2940&auto=format&fit=crop",
+                link: "/services#occupational",
+                color: "#048a7a",
+                textColor: "white",
+              },
+              {
+                title: "Special Education",
+                description: "Individualized learning support for children with developmental delays and learning needs",
+                tag: "education",
+                src: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2940&auto=format&fit=crop",
+                link: "/services#education",
+                color: "#048a7a",
+                textColor: "white",
+              },
+              {
+                title: "Family-Centered Care",
+                description: "Supporting families every step of the way with compassionate, personalized care",
+                tag: "care",
+                src: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=2940&auto=format&fit=crop",
+                link: "/services",
+                color: "#048a7a",
+                textColor: "white",
+              },
+            ]}
+          />
         </div>
 
         {/* CTA */}
@@ -81,7 +100,7 @@ const ServicesSection = () => {
           transition={{ delay: 0.4, duration: 0.6 }}
           className="text-center"
         >
-          <Button variant="cosmic" size="lg" asChild>
+          <Button variant="hero" size="lg" asChild>
             <Link to="/services">
               View All Services
               <ArrowRight className="w-4 h-4" />

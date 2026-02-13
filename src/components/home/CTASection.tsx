@@ -5,8 +5,8 @@ import { Button } from "@/components/ui/button";
 
 const CTASection = () => {
   return (
-    <section className="py-24 bg-cosmic-900 relative overflow-hidden">
-      {/* Stars Background */}
+    <section className="py-12 bg-white relative overflow-hidden">
+      {/* Nature-Inspired Background */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(20)].map((_, i) => (
           <motion.div
@@ -14,15 +14,15 @@ const CTASection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: [0.2, 0.8, 0.2] }}
             transition={{ duration: 2 + Math.random() * 2, repeat: Infinity, delay: Math.random() * 2 }}
-            className="absolute w-1 h-1 bg-cosmic-50 rounded-full"
+            className="absolute w-1 h-1 bg-accent rounded-full"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
             }}
           />
         ))}
-        <div className="absolute -top-32 -right-32 w-[400px] h-[400px] border border-cosmic-700 rounded-full opacity-20" />
-        <div className="absolute -bottom-32 -left-32 w-[300px] h-[300px] border border-cosmic-700 rounded-full opacity-20" />
+        <div className="absolute -top-32 -right-32 w-[400px] h-[400px] border border-cosmic-500 rounded-full opacity-20" />
+        <div className="absolute -bottom-32 -left-32 w-[300px] h-[300px] border border-cosmic-500 rounded-full opacity-20" />
       </div>
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
@@ -34,14 +34,14 @@ const CTASection = () => {
           className="max-w-2xl mx-auto text-center"
         >
           <div className="flex justify-center gap-2 mb-6">
-            <Star className="w-5 h-5 text-cosmic-300" />
-            <Star className="w-5 h-5 text-cosmic-200" />
-            <Star className="w-5 h-5 text-cosmic-300" />
+            <Star className="w-5 h-5 text-cosmic-700 fill-cosmic-700" />
+            <Star className="w-5 h-5 text-cosmic-700/80 fill-cosmic-700/80" />
+            <Star className="w-5 h-5 text-cosmic-700 fill-cosmic-700" />
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-cosmic-50 mb-6">
+          <h2 className="text-3xl sm:text-4xl font-bold text-cosmic-700 mb-6">
             Take the First Step Today
           </h2>
-          <p className="text-cosmic-300 text-lg mb-8">
+          <p className="text-cosmic-700/90 text-lg mb-8">
             Early support can make a meaningful difference.
             <br />
             We are here to guide you.
@@ -49,7 +49,7 @@ const CTASection = () => {
           <Button
             variant="hero"
             size="xl"
-            className="bg-cosmic-50 text-cosmic-900 hover:bg-cosmic-100 border-cosmic-200"
+            className="shadow-lg"
             asChild
           >
             <Link to="/contact">

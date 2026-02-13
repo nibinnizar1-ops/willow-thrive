@@ -30,7 +30,7 @@ const steps = [
 
 const ApproachSection = () => {
   return (
-    <section className="py-24 bg-cosmic-50">
+    <section className="py-12 bg-white">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Header */}
         <motion.div
@@ -40,10 +40,10 @@ const ApproachSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-2xl mx-auto mb-16"
         >
-          <span className="text-cosmic-500 font-medium text-sm uppercase tracking-wider mb-4 block">
+          <span className="text-cosmic-700/80 font-medium text-sm uppercase tracking-wider mb-4 block">
             Our Process
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-cosmic-700 mb-4">
             How We Support Your Child
           </h2>
         </motion.div>
@@ -61,20 +61,20 @@ const ApproachSection = () => {
             >
               {/* Line */}
               {index !== steps.length - 1 && (
-                <div className="absolute left-6 top-14 w-px h-full bg-cosmic-300" />
+                <div className="absolute left-6 top-14 w-px h-full bg-cosmic-700/30" />
               )}
               
               {/* Number */}
-              <div className="w-12 h-12 bg-cosmic-900 rounded-full flex items-center justify-center flex-shrink-0 relative z-10 border-2 border-cosmic-700">
-                <span className="text-cosmic-50 font-bold text-sm">{step.number}</span>
+              <div className="w-12 h-12 bg-cosmic-700 rounded-full flex items-center justify-center flex-shrink-0 relative z-10 border-2 border-cosmic-700/30">
+                <span className="text-white font-bold text-sm">{step.number}</span>
               </div>
 
               {/* Content */}
               <div className="flex-1 pt-2">
-                <h3 className="font-serif text-xl font-semibold text-foreground mb-2">
+                <h3 className="text-xl font-semibold text-cosmic-700 mb-2">
                   {step.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-cosmic-700/90 leading-relaxed">
                   {step.description}
                 </p>
               </div>

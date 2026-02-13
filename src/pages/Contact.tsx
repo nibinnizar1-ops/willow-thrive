@@ -49,7 +49,7 @@ const Contact = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="pt-32 pb-24 bg-gradient-hero">
+      <section className="pt-32 pb-24 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -57,14 +57,14 @@ const Contact = () => {
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
-            <span className="text-willow-500 font-medium text-sm uppercase tracking-wider mb-4 block">
+            <span className="text-cosmic-700/80 font-medium text-sm uppercase tracking-wider mb-4 block">
               Contact Us
             </span>
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-cosmic-700 mb-6">
               We're Here to{" "}
-              <span className="text-willow-500">Help</span>
+              <span className="text-cosmic-700/90">Help</span>
             </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lg text-cosmic-700/90 leading-relaxed">
               If you have concerns about your child's development or would like to understand how we can support you, reach out to us. Early guidance can make a meaningful difference.
             </p>
           </motion.div>
@@ -72,7 +72,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Contact Info */}
@@ -82,7 +82,7 @@ const Contact = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="font-serif text-3xl font-bold text-foreground mb-8">
+              <h2 className="text-3xl font-bold text-cosmic-700 mb-8">
                 Get in Touch
               </h2>
 
@@ -96,13 +96,13 @@ const Contact = () => {
                     transition={{ delay: index * 0.1, duration: 0.5 }}
                     className="flex gap-4"
                   >
-                    <div className="w-12 h-12 bg-willow-100 rounded-2xl flex items-center justify-center flex-shrink-0">
-                      <info.icon className="w-6 h-6 text-willow-600" />
+                    <div className="w-12 h-12 bg-cosmic-700/20 rounded-2xl flex items-center justify-center flex-shrink-0">
+                      <info.icon className="w-6 h-6 text-cosmic-700" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground mb-1">{info.title}</h4>
+                      <h4 className="font-semibold text-cosmic-700 mb-1">{info.title}</h4>
                       {info.lines.map((line, i) => (
-                        <p key={i} className="text-muted-foreground text-sm">{line}</p>
+                        <p key={i} className="text-cosmic-700/90 text-sm">{line}</p>
                       ))}
                     </div>
                   </motion.div>
@@ -110,10 +110,10 @@ const Contact = () => {
               </div>
 
               {/* Map Placeholder */}
-              <div className="mt-12 aspect-video bg-willow-50 rounded-3xl flex items-center justify-center">
+              <div className="mt-12 aspect-video bg-cosmic-700/10 backdrop-blur-sm rounded-3xl flex items-center justify-center border border-cosmic-700/20">
                 <div className="text-center">
-                  <MapPin className="w-12 h-12 text-willow-300 mx-auto mb-4" />
-                  <p className="text-muted-foreground">Map Coming Soon</p>
+                  <MapPin className="w-12 h-12 text-cosmic-700/60 mx-auto mb-4" />
+                  <p className="text-cosmic-700/80">Map Coming Soon</p>
                 </div>
               </div>
             </motion.div>
@@ -125,14 +125,14 @@ const Contact = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <div className="bg-cream-50 p-8 sm:p-12 rounded-3xl">
-                <h3 className="font-serif text-2xl font-bold text-foreground mb-6">
+              <div className="bg-cosmic-700/10 backdrop-blur-sm p-8 sm:p-12 rounded-3xl border border-cosmic-700/20">
+                <h3 className="text-2xl font-bold text-cosmic-700 mb-6">
                   Book an Appointment
                 </h3>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                    <label htmlFor="name" className="block text-sm font-medium text-cosmic-700 mb-2">
                       Your Name
                     </label>
                     <input
@@ -141,13 +141,13 @@ const Contact = () => {
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-3 bg-background border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-willow-500 transition-all"
+                      className="w-full px-4 py-3 bg-white text-cosmic-700 border border-cosmic-700/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-cosmic-700 transition-all"
                       placeholder="Enter your name"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                    <label htmlFor="email" className="block text-sm font-medium text-cosmic-700 mb-2">
                       Email Address
                     </label>
                     <input
@@ -156,13 +156,13 @@ const Contact = () => {
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-3 bg-background border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-willow-500 transition-all"
+                      className="w-full px-4 py-3 bg-white text-cosmic-700 border border-cosmic-700/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-cosmic-700 transition-all"
                       placeholder="Enter your email"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
+                    <label htmlFor="phone" className="block text-sm font-medium text-cosmic-700 mb-2">
                       Phone Number
                     </label>
                     <input
@@ -170,13 +170,13 @@ const Contact = () => {
                       id="phone"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full px-4 py-3 bg-background border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-willow-500 transition-all"
+                      className="w-full px-4 py-3 bg-white text-cosmic-700 border border-cosmic-700/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-cosmic-700 transition-all"
                       placeholder="Enter your phone number"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                    <label htmlFor="message" className="block text-sm font-medium text-cosmic-700 mb-2">
                       Your Message
                     </label>
                     <textarea
@@ -185,7 +185,7 @@ const Contact = () => {
                       rows={4}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full px-4 py-3 bg-background border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-willow-500 transition-all resize-none"
+                      className="w-full px-4 py-3 bg-white text-cosmic-700 border border-cosmic-700/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-cosmic-700 transition-all resize-none"
                       placeholder="Tell us about your child and how we can help..."
                     />
                   </div>

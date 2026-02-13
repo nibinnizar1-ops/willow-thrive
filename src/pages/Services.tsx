@@ -20,8 +20,8 @@ const services = [
     ],
     note: "Our sessions are interactive, engaging, and paced to suit your child's comfort and ability.",
     cta: "Book a Speech Assessment",
-    color: "bg-willow-100",
-    iconColor: "bg-willow-500 text-primary-foreground",
+    color: "bg-cosmic-700/10",
+    iconColor: "bg-cosmic-700 text-white",
   },
   {
     id: "occupational",
@@ -38,8 +38,8 @@ const services = [
     ],
     note: "Therapy is play-based, goal-oriented, and tailored to real-life needs.",
     cta: "Explore Occupational Therapy",
-    color: "bg-cream-100",
-    iconColor: "bg-coral-500 text-accent-foreground",
+    color: "bg-cosmic-700/10",
+    iconColor: "bg-cosmic-700 text-white",
   },
   {
     id: "education",
@@ -56,8 +56,8 @@ const services = [
     ],
     note: "We work closely with families to align learning goals with the child's abilities.",
     cta: "Talk to a Special Educator",
-    color: "bg-willow-50",
-    iconColor: "bg-willow-600 text-primary-foreground",
+    color: "bg-cosmic-700/10",
+    iconColor: "bg-cosmic-700 text-white",
   },
 ];
 
@@ -65,7 +65,7 @@ const Services = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="pt-32 pb-24 bg-gradient-hero">
+      <section className="pt-32 pb-24 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -73,14 +73,14 @@ const Services = () => {
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
-            <span className="text-willow-500 font-medium text-sm uppercase tracking-wider mb-4 block">
+            <span className="text-cosmic-700/80 font-medium text-sm uppercase tracking-wider mb-4 block">
               Our Services
             </span>
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-cosmic-700 mb-6">
               Specialized Care for{" "}
-              <span className="text-willow-500">Every Child</span>
+              <span className="text-cosmic-700/90">Every Child</span>
             </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lg text-cosmic-700/90 leading-relaxed">
               We offer specialized therapy services designed to support children's communication, development, learning, and daily functioning. Each service is delivered through a personalized, child-friendly approach.
             </p>
           </motion.div>
@@ -88,7 +88,7 @@ const Services = () => {
       </section>
 
       {/* Services Detail */}
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="space-y-24">
             {services.map((service, index) => (
@@ -111,7 +111,7 @@ const Services = () => {
                         <div className={`w-32 h-32 ${service.iconColor} organic-blob mx-auto mb-6 flex items-center justify-center animate-float`}>
                           <service.icon className="w-16 h-16" />
                         </div>
-                        <p className="font-serif text-xl text-foreground font-semibold">
+                        <p className="text-xl text-cosmic-700 font-semibold">
                           {service.tagline}
                         </p>
                       </div>
@@ -121,26 +121,26 @@ const Services = () => {
 
                 {/* Content */}
                 <div className={`${index % 2 === 1 ? "lg:col-start-1" : ""}`}>
-                  <h2 className="font-serif text-3xl font-bold text-foreground mb-4">
+                  <h2 className="text-3xl font-bold text-cosmic-700 mb-4">
                     {service.title}
                   </h2>
-                  <p className="text-muted-foreground leading-relaxed mb-6">
+                  <p className="text-cosmic-700/90 leading-relaxed mb-6">
                     {service.description}
                   </p>
 
-                  <h4 className="font-medium text-foreground mb-4">We help with:</h4>
+                  <h4 className="font-medium text-cosmic-700 mb-4">We help with:</h4>
                   <ul className="space-y-3 mb-6">
                     {service.areas.map((area, i) => (
                       <li key={i} className="flex items-center gap-3">
-                        <div className="w-5 h-5 bg-willow-100 rounded-full flex items-center justify-center flex-shrink-0">
-                          <Check className="w-3 h-3 text-willow-600" />
+                        <div className="w-5 h-5 bg-cosmic-700/20 rounded-full flex items-center justify-center flex-shrink-0">
+                          <Check className="w-3 h-3 text-cosmic-700" />
                         </div>
-                        <span className="text-muted-foreground">{area}</span>
+                        <span className="text-cosmic-700/90">{area}</span>
                       </li>
                     ))}
                   </ul>
 
-                  <p className="text-foreground italic mb-8">
+                  <p className="text-cosmic-700 italic mb-8">
                     {service.note}
                   </p>
 

@@ -14,7 +14,7 @@ const Approach = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="pt-32 pb-24 bg-gradient-hero">
+      <section className="pt-32 pb-24 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -22,14 +22,14 @@ const Approach = () => {
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
-            <span className="text-willow-500 font-medium text-sm uppercase tracking-wider mb-4 block">
+            <span className="text-cosmic-700/80 font-medium text-sm uppercase tracking-wider mb-4 block">
               Our Approach
             </span>
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-cosmic-700 mb-6">
               Our{" "}
-              <span className="text-willow-500">Child-First</span> Approach
+              <span className="text-cosmic-700/90">Child-First</span> Approach
             </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lg text-cosmic-700/90 leading-relaxed">
               At Willow, therapy is not rushed or standardized. We focus on understanding the whole child — emotionally, developmentally, and socially.
             </p>
           </motion.div>
@@ -37,7 +37,7 @@ const Approach = () => {
       </section>
 
       {/* Principles */}
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Content */}
@@ -47,7 +47,7 @@ const Approach = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="font-serif text-3xl font-bold text-foreground mb-8">
+              <h2 className="text-3xl font-bold text-cosmic-700 mb-8">
                 What Makes Our Approach Different
               </h2>
 
@@ -61,10 +61,10 @@ const Approach = () => {
                     transition={{ delay: index * 0.1, duration: 0.5 }}
                     className="flex items-start gap-4"
                   >
-                    <div className="w-8 h-8 bg-willow-500 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Check className="w-5 h-5 text-primary-foreground" />
+                    <div className="w-8 h-8 bg-cosmic-700 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Check className="w-5 h-5 text-white" />
                     </div>
-                    <span className="text-lg text-foreground pt-0.5">{principle}</span>
+                    <span className="text-lg text-cosmic-700 pt-0.5">{principle}</span>
                   </motion.li>
                 ))}
               </ul>
@@ -77,15 +77,15 @@ const Approach = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <div className="aspect-square max-w-md mx-auto bg-willow-50 rounded-3xl flex items-center justify-center p-12">
+              <div className="aspect-square max-w-md mx-auto bg-cosmic-700/10 backdrop-blur-sm rounded-3xl flex items-center justify-center p-12 border border-cosmic-700/20">
                 <div className="text-center">
-                  <div className="w-40 h-40 bg-willow-200 organic-blob mx-auto mb-6 flex items-center justify-center animate-float">
+                  <div className="w-40 h-40 bg-cosmic-700/20 organic-blob mx-auto mb-6 flex items-center justify-center animate-float">
                     <span className="text-7xl">🌱</span>
                   </div>
-                  <p className="font-serif text-2xl text-willow-700 font-semibold">
+                  <p className="text-2xl text-cosmic-700 font-semibold">
                     Every Child is Unique
                   </p>
-                  <p className="text-muted-foreground mt-2">
+                  <p className="text-cosmic-700/80 mt-2">
                     And deserves unique care
                   </p>
                 </div>
@@ -96,7 +96,7 @@ const Approach = () => {
       </section>
 
       {/* Process */}
-      <section className="py-24 bg-secondary">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -105,10 +105,10 @@ const Approach = () => {
             transition={{ duration: 0.6 }}
             className="text-center max-w-2xl mx-auto mb-16"
           >
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-cosmic-700 mb-4">
               Our Therapy Journey
             </h2>
-            <p className="text-muted-foreground">
+            <p className="text-cosmic-700/90">
               A structured yet flexible path designed around your child's needs.
             </p>
           </motion.div>
@@ -125,15 +125,15 @@ const Approach = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.15, duration: 0.6 }}
-                className="bg-background p-8 rounded-3xl text-center"
+                className="bg-cosmic-700/10 backdrop-blur-sm p-8 rounded-3xl text-center border border-cosmic-700/20"
               >
-                <div className="w-12 h-12 bg-willow-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-primary-foreground font-bold">{item.step}</span>
+                <div className="w-12 h-12 bg-cosmic-700 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-white font-bold">{item.step}</span>
                 </div>
-                <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
+                <h3 className="text-xl font-semibold text-cosmic-700 mb-3">
                   {item.title}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-cosmic-700/90 text-sm leading-relaxed">
                   {item.desc}
                 </p>
               </motion.div>

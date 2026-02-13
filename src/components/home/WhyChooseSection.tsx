@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Check, Star } from "lucide-react";
+import { Check } from "lucide-react";
 
 const reasons = [
   "Experienced, child-focused therapists",
@@ -11,74 +11,48 @@ const reasons = [
 
 const WhyChooseSection = () => {
   return (
-    <section className="py-24 bg-background">
+    <section className="py-12 bg-white relative overflow-hidden">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Content */}
+        {/* Header */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+          transition={{ duration: 0.6 }}
+          className="text-center max-w-2xl mx-auto mb-16"
           >
-            <span className="text-cosmic-500 font-medium text-sm uppercase tracking-wider mb-4 block">
+          <span className="text-cosmic-700/80 font-medium text-sm uppercase tracking-wider mb-4 block">
               Why Choose Willow
             </span>
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl sm:text-4xl font-bold text-cosmic-700 mb-6">
               A Place Where Children Feel Safe to Grow
             </h2>
-            <p className="text-muted-foreground leading-relaxed mb-8">
+          <p className="text-cosmic-700/90 leading-relaxed mb-8">
               We believe trust is built through transparency, patience, and care — values we practice every day.
             </p>
+        </motion.div>
 
-            <ul className="space-y-4">
+        {/* Reasons Cards */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 max-w-5xl mx-auto">
               {reasons.map((reason, index) => (
-                <motion.li
+            <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1, duration: 0.5 }}
-                  className="flex items-center gap-3"
-                >
-                  <div className="w-6 h-6 bg-cosmic-900 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Check className="w-4 h-4 text-cosmic-50" />
-                  </div>
-                  <span className="text-foreground">{reason}</span>
-                </motion.li>
-              ))}
-            </ul>
-          </motion.div>
-
-          {/* Visual */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="relative"
-          >
-            <div className="aspect-square max-w-md mx-auto relative">
-              <div className="absolute inset-0 bg-cosmic-100 rounded-3xl border border-cosmic-200" />
-              <div className="absolute inset-6 bg-background rounded-2xl flex items-center justify-center border border-cosmic-200 shadow-lg">
-                <div className="text-center">
-                  <motion.div
-                    animate={{ rotate: 360 }}
-                    transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-                    className="w-32 h-32 border-2 border-dashed border-cosmic-300 rounded-full mx-auto mb-4 flex items-center justify-center"
-                  >
-                    <div className="w-20 h-20 bg-cosmic-900 rounded-full flex items-center justify-center">
-                      <Star className="w-10 h-10 text-cosmic-50" />
-                    </div>
-                  </motion.div>
-                  <p className="font-serif text-xl text-foreground font-semibold">
-                    Trusted by Families
-                  </p>
+              className="bg-cosmic-700/10 backdrop-blur-sm rounded-xl p-6 border border-cosmic-700/20 hover:bg-cosmic-700/15 transition-colors"
+            >
+              <div className="flex items-start gap-4">
+                <div className="w-8 h-8 bg-cosmic-700 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <Check className="w-5 h-5 text-white" />
                 </div>
-              </div>
+                <span className="text-cosmic-700 text-sm leading-relaxed">{reason}</span>
             </div>
           </motion.div>
+          ))}
         </div>
+
       </div>
     </section>
   );

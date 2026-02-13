@@ -10,7 +10,7 @@ const trustItems = [
 
 const TrustStrip = () => {
   return (
-    <section className="bg-cosmic-900 py-8">
+    <section className="bg-cosmic-700 py-8">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {trustItems.map((item, index) => (
