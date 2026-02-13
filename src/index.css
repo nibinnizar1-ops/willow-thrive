@@ -2,59 +2,94 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+/* Zona Pro Font - Add your font files to /public/fonts/ */
+@font-face {
+  font-family: 'Zona Pro';
+  src: url('/fonts/ZonaPro-Regular.woff2') format('woff2'),
+       url('/fonts/ZonaPro-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
-/* Willow - Teal & White Theme - #048a7a */
+@font-face {
+  font-family: 'Zona Pro';
+  src: url('/fonts/ZonaPro-Medium.woff2') format('woff2'),
+       url('/fonts/ZonaPro-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Zona Pro';
+  src: url('/fonts/ZonaPro-SemiBold.woff2') format('woff2'),
+       url('/fonts/ZonaPro-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Zona Pro';
+  src: url('/fonts/ZonaPro-Bold.woff2') format('woff2'),
+       url('/fonts/ZonaPro-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Willow - Teal & White Theme - #00686B */
 
 @layer base {
   :root {
-    /* White Background with Teal Text - #048a7a */
-    /* #048a7a = hsl(173, 94%, 28%) */
+    /* White Background with Teal Text - #00686B */
+    /* #00686B = hsl(182, 100%, 21%) */
     --background: 0 0% 100%;
-    --foreground: 173 94% 28%;
+    --foreground: 182 100% 21%;
 
     --card: 0 0% 98%;
-    --card-foreground: 173 94% 28%;
+    --card-foreground: 182 100% 21%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 173 94% 28%;
+    --popover-foreground: 182 100% 21%;
 
-    /* Primary Teal - #048a7a */
-    --primary: 173 94% 28%;
+    /* Primary Teal - #00686B */
+    --primary: 182 100% 21%;
     --primary-foreground: 0 0% 100%;
 
     /* Soft Gray - Secondary */
     --secondary: 0 0% 96%;
-    --secondary-foreground: 173 94% 28%;
+    --secondary-foreground: 182 100% 21%;
 
     /* Muted Tones */
     --muted: 0 0% 94%;
-    --muted-foreground: 173 94% 28%;
+    --muted-foreground: 182 100% 21%;
 
     /* Teal Accent */
-    --accent: 173 80% 35%;
+    --accent: 182 80% 30%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 173 30% 85%;
-    --input: 173 30% 85%;
-    --ring: 173 94% 28%;
+    --border: 182 30% 85%;
+    --input: 182 30% 85%;
+    --ring: 182 100% 21%;
 
     --radius: 0.75rem;
 
-    /* Teal Color Palette - #048a7a variations */
-    --cosmic-50: 173 30% 95%;
-    --cosmic-100: 173 40% 85%;
-    --cosmic-200: 173 50% 70%;
-    --cosmic-300: 173 60% 55%;
-    --cosmic-400: 173 70% 45%;
-    --cosmic-500: 173 80% 35%;
-    --cosmic-600: 173 90% 30%;
-    --cosmic-700: 173 94% 28%; /* #048a7a */
-    --cosmic-800: 173 95% 22%;
-    --cosmic-900: 173 96% 15%;
+    /* Teal Color Palette - #00686B variations */
+    --cosmic-50: 182 30% 95%;
+    --cosmic-100: 182 40% 85%;
+    --cosmic-200: 182 50% 70%;
+    --cosmic-300: 182 60% 55%;
+    --cosmic-400: 182 70% 45%;
+    --cosmic-500: 182 80% 35%;
+    --cosmic-600: 182 90% 28%;
+    --cosmic-700: 182 100% 21%; /* #00686B */
+    --cosmic-800: 182 100% 18%;
+    --cosmic-900: 182 100% 15%;
 
     /* Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(0 0% 97%) 50%, hsl(0 0% 94%) 100%);
@@ -129,13 +164,13 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Space Grotesk', sans-serif;
-    color: hsl(173 94% 28%);
+    font-family: 'Zona Pro', sans-serif;
+    color: hsl(182 100% 21%);
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
-    color: hsl(173 94% 28%);
+    font-family: 'Zona Pro', sans-serif;
+    color: hsl(182 100% 21%);
   }
 }
 

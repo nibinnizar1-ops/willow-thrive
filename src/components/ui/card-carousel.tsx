@@ -68,7 +68,7 @@ export const CardCarousel: React.FC<CarouselProps> = ({
   
   .swiper-button-next,
   .swiper-button-prev {
-    color: #048a7a;
+    color: #00686B;
     background: rgba(4, 138, 122, 0.1);
     backdrop-filter: blur(10px);
     border-radius: 50%;
@@ -88,7 +88,7 @@ export const CardCarousel: React.FC<CarouselProps> = ({
   }
   
   .swiper-pagination-bullet {
-    background: #048a7a;
+    background: #00686B;
     opacity: 0.5;
   }
   

@@ -11,7 +11,7 @@ const HeroSection = () => {
       {/* Wave Background */}
       <Waves 
         className="opacity-30"
-        strokeColor="#048a7a"
+        strokeColor="#00686B"
         backgroundColor="transparent"
         pointerSize={0.3}
       />
@@ -20,7 +20,7 @@ const HeroSection = () => {
       <LeafParticles 
         className="opacity-40"
         leafCount={25}
-        colors={["#048a7a", "#059a8a", "#06aa9a", "#07baaa"]}
+        colors={["#00686B", "#007a7d", "#008c8f", "#009ea1"]}
       />
 
       <div className="container mx-auto px-4 lg:px-8 pt-24 pb-16 relative z-10">

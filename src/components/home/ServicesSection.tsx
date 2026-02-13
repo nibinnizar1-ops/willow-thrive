@@ -58,7 +58,7 @@ const ServicesSection = () => {
                 tag: "therapy",
                 src: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=2940&auto=format&fit=crop",
                 link: "/services#speech",
-                color: "#048a7a",
+                color: "#00686B",
                 textColor: "white",
               },
               {
@@ -67,7 +67,7 @@ const ServicesSection = () => {
                 tag: "therapy",
                 src: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?q=80&w=2940&auto=format&fit=crop",
                 link: "/services#occupational",
-                color: "#048a7a",
+                color: "#00686B",
                 textColor: "white",
               },
               {
@@ -76,7 +76,7 @@ const ServicesSection = () => {
                 tag: "education",
                 src: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2940&auto=format&fit=crop",
                 link: "/services#education",
-                color: "#048a7a",
+                color: "#00686B",
                 textColor: "white",
               },
               {
@@ -85,7 +85,7 @@ const ServicesSection = () => {
                 tag: "care",
                 src: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=2940&auto=format&fit=crop",
                 link: "/services",
-                color: "#048a7a",
+                color: "#00686B",
                 textColor: "white",
               },
             ]}

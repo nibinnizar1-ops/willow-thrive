@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Mona Sans', 'sans-serif'],
-        serif: ['Mona Sans', 'sans-serif'],
+        sans: ['Zona Pro', 'sans-serif'],
+        serif: ['Zona Pro', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
