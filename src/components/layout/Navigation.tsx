@@ -46,13 +46,11 @@ const Navigation = () => {
         <div className={`flex items-center ${isScrolled ? 'justify-between' : 'justify-between'} h-20 relative`}>
           {/* Logo - Always visible */}
           <Link to="/" className="flex items-center gap-3 group z-10">
-            <div className="w-10 h-10 bg-cosmic-700 rounded-full flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow border border-cosmic-700/30">
-              <span className="text-white font-serif text-xl font-bold">W</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-xl font-semibold text-cosmic-700">Willow</span>
-              <span className="text-xs text-cosmic-700/80 hidden sm:block">Child Development Center</span>
-            </div>
+            <img 
+              src="/logo.png" 
+              alt="Willow Child Development Center" 
+              className="h-12 w-auto object-contain"
+            />
           </Link>
 
           {/* Desktop Navigation - Show regular nav when not scrolled, tubelight when scrolled */}

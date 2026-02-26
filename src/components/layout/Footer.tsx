@@ -9,14 +9,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-1">
-            <Link to="/" className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-cosmic-700 rounded-full flex items-center justify-center border border-cosmic-700/30">
-                <span className="text-white font-serif text-xl font-bold">W</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-serif text-xl font-semibold text-cosmic-700">Willow</span>
-                <span className="text-xs text-cosmic-700/80">Child Development Center</span>
-              </div>
+            <Link to="/" className="flex items-center mb-6">
+              <img 
+                src="/logo.png" 
+                alt="Willow Child Development Center" 
+                className="h-12 w-auto object-contain"
+              />
             </Link>
             <p className="text-cosmic-700/90 text-sm leading-relaxed">
               Empowering children to thrive, one step at a time. We support children with speech, developmental, and learning needs through compassionate therapy.
