@@ -47,7 +47,7 @@ const Parents = () => {
             transition={{ duration: 0.6 }}
             className="text-center max-w-2xl mx-auto mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-cosmic-700 mb-4">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-cosmic-700 mb-4">
               What You Can Expect
             </h2>
           </motion.div>

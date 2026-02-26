@@ -27,7 +27,7 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section className="py-12 bg-white">
+    <section className="py-12 bg-cosmic-700">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Header */}
         <motion.div
@@ -37,13 +37,13 @@ const ServicesSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-2xl mx-auto mb-16"
         >
-          <span className="text-cosmic-700/80 font-medium text-sm uppercase tracking-wider mb-4 block">
+          <span className="text-white/80 font-medium text-sm uppercase tracking-wider mb-4 block">
             Our Services
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-cosmic-700 mb-4">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4">
             Core Services
           </h2>
-          <p className="text-cosmic-700/90">
+          <p className="text-white/90">
             We offer specialized therapy services designed to support children's communication, development, learning, and daily functioning.
           </p>
         </motion.div>
@@ -100,7 +100,11 @@ const ServicesSection = () => {
           transition={{ delay: 0.4, duration: 0.6 }}
           className="text-center"
         >
-          <Button variant="hero" size="lg" asChild>
+          <Button 
+            size="lg" 
+            asChild
+            className="bg-white text-cosmic-700 hover:bg-white/90 shadow-lg hover:shadow-xl font-semibold border border-white"
+          >
             <Link to="/services">
               View All Services
               <ArrowRight className="w-4 h-4" />

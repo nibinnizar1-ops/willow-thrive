@@ -38,7 +38,7 @@ const CTASection = () => {
             <Star className="w-5 h-5 text-cosmic-700/80 fill-cosmic-700/80" />
             <Star className="w-5 h-5 text-cosmic-700 fill-cosmic-700" />
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-cosmic-700 mb-6">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-cosmic-700 mb-6">
             Take the First Step Today
           </h2>
           <p className="text-cosmic-700/90 text-lg mb-8">

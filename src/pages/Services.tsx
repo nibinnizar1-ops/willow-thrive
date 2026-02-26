@@ -121,7 +121,7 @@ const Services = () => {
 
                 {/* Content */}
                 <div className={`${index % 2 === 1 ? "lg:col-start-1" : ""}`}>
-                  <h2 className="text-3xl font-bold text-cosmic-700 mb-4">
+                  <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-cosmic-700 mb-4">
                     {service.title}
                   </h2>
                   <p className="text-cosmic-700/90 leading-relaxed mb-6">

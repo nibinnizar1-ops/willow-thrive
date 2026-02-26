@@ -47,7 +47,7 @@ const Approach = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl font-bold text-cosmic-700 mb-8">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-cosmic-700 mb-8">
                 What Makes Our Approach Different
               </h2>
 
@@ -105,7 +105,7 @@ const Approach = () => {
             transition={{ duration: 0.6 }}
             className="text-center max-w-2xl mx-auto mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-cosmic-700 mb-4">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-cosmic-700 mb-4">
               Our Therapy Journey
             </h2>
             <p className="text-cosmic-700/90">

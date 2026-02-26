@@ -24,7 +24,7 @@ const WhyChooseSection = () => {
           <span className="text-cosmic-700/80 font-medium text-sm uppercase tracking-wider mb-4 block">
               Why Choose Willow
             </span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-cosmic-700 mb-6">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-cosmic-700 mb-6">
               A Place Where Children Feel Safe to Grow
             </h2>
           <p className="text-cosmic-700/90 leading-relaxed mb-8">

@@ -16,7 +16,7 @@ const ReassuranceSection = () => {
             <Heart className="w-8 h-8 text-cosmic-700" />
           </div>
           
-          <h2 className="text-3xl sm:text-4xl font-bold text-cosmic-700 mb-6">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-cosmic-700 mb-6">
             You Are Not Alone in This Journey
           </h2>
           
